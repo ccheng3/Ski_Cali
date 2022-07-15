@@ -1,0 +1,23 @@
+/* Ski California website: https://skicalifornia.org/
+
+Main Color Palette:
+Dark Teal Green --> #2d4850
+Burnt Orange --> #f25800
+White and Black as Font contrast --> #fff or #000
+*/
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto';
+}
+
+.main-nav {
+   display: flex;
+   justify-content: space-between;
+}
+
+.main-navlink {
+   margin-right: 10px;
+}
