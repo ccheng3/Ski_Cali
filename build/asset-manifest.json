@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.24be6bde.css",
+    "main.js": "/static/js/main.55f07dc0.js",
+    "static/media/about-page-author.jpg": "/static/media/about-page-author.3588cb483745814ded6a.jpg",
+    "static/media/diamondpeak.png": "/static/media/diamondpeak.f683eeef23d73ee26a54.png",
+    "static/media/windy-logo.png": "/static/media/windy-logo.8950c5590d7e2fb1c245.png",
+    "static/media/skiing.png": "/static/media/skiing.d70a9f2dc51e08a62f13.png",
+    "static/media/june.png": "/static/media/june.27ccd78fe11556d36e12.png",
+    "static/media/chinapeak.png": "/static/media/chinapeak.f4135a49176c2b9ea9d0.png",
+    "static/media/tahoedonner.png": "/static/media/tahoedonner.435c2df7c9d194fa67f3.png",
+    "static/media/mtrose.png": "/static/media/mtrose.acc37d6c2eeed8af08c8.png",
+    "static/media/Logo blue.svg": "/static/media/Logo blue.bf36f3f69522a27a80a43488f00cffa0.svg",
+    "index.html": "/index.html",
+    "main.24be6bde.css.map": "/static/css/main.24be6bde.css.map",
+    "main.55f07dc0.js.map": "/static/js/main.55f07dc0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24be6bde.css",
+    "static/js/main.55f07dc0.js"
+  ]
+}
