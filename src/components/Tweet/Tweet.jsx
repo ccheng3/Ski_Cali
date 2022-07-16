@@ -23,7 +23,11 @@ export default function Tweet(props) {
                display: 'flex',
                alignItems: 'center',
             }}>
-               <img src={TwitterLogo} width='25px' height='25px' style={{ marginRight: '5px' }} />
+               <img src={TwitterLogo} width='25px' height='25px'
+                  style={{
+                     marginRight: '5px',
+                     borderRadius: '5px'
+                  }} />
                {`@${props.resort.twitter.user}`}
             </Typography>
 

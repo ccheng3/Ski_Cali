@@ -24,7 +24,9 @@ export default function TweetPanel(props) {
             alignItems: 'center',
             marginTop: '1.2rem',
          }}>
-            <img width='350px' height='auto' src={tweetMediaObject[0].media_url_https} />
+            <img width='350px' height='auto'
+               style={{ borderRadius: '10px' }}
+               src={tweetMediaObject[0].media_url_https} />
          </Container>
 
       const cleanTweetText = tweet.text.includes('https') ? tweet.text.substring(0, tweet.text.search('https')) :
