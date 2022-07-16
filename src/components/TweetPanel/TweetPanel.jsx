@@ -34,7 +34,6 @@ export default function TweetPanel(props) {
             .search(' '))
          .replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '');
 
-      console.log(tweetTextURL);
       return (
          <Tweet tweetDateClean={tweetDateClean}
             tweetMediaFile={tweetMediaFile}
