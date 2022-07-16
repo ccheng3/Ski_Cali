@@ -20,3 +20,9 @@ https://mtns.co/collections/puzzles (the 1000 piece sets)
 
 07/15/22: Almost went crazy trying to config 'redirects' Netlify deployment quirk
 with React Router, last ditch effort was to pull source code out of 'liftie-resorts' directory and re-deploy. That's 4 hours of my life I'll never get back :) 
+Thought was explained here: https://www.codementor.io/@ekunolaeasybuoy/deploying-react-app-from-github-to-netlify-xob6bhhxu
+
+07/15/22: Accidentally pushed /build and /node_modules to GitHub, was able to find
+solution to remove directories from repo but not local from here: 
+https://stackoverflow.com/questions/6313126/how-to-remove-a-directory-from-git-repository
+
