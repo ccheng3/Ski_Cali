@@ -9,11 +9,11 @@ export default function TrafficMap(props) {
       borderRadius: '20px',
    }
 
-   let sourceString = props.mapMode === 'directions' ? `https://www.google.com/maps/embed/v1/directions?key=${process.env.REACT_APP_GOOGLE_MAPS_EMBED_API_KEY}
+   let sourceString = props.mapMode === 'directions' ? `https://www.google.com/maps/embed/v1/directions?key=${process.env.REACT_APP_MAPS_API_KEY}
    &origin=${props.lat},${props.long}&destination=${props.destination}` :
-      `https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_GOOGLE_MAPS_EMBED_API_KEY}
+      `https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_MAPS_API_KEY}
       &q=${props.resortName}+Ski+Resort&zoom=10&center=${props.lat},${props.long}`
-
+   console.log(process.env.REACT_APP_MAPS_API_KEY);
    return (
       <>
          <div style={{
