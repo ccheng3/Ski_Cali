@@ -18,3 +18,5 @@ https://mtns.co/collections/puzzles (the 1000 piece sets)
 
 07/03/22: I set up a CORS proxy to resolve the 'No Access-Control-Allow-Origin' header is present situation: https://stackoverflow.com/questions/43262121/trying-to-use-fetch-and-pass-in-mode-no-cors/43268098#43268098
 
+07/15/22: Almost went crazy trying to config 'redirects' Netlify deployment quirk
+with React Router, last ditch effort was to pull source code out of 'liftie-resorts' directory and re-deploy. That's 4 hours of my life I'll never get back :) 
