@@ -1,7 +1,7 @@
 # Ski-California
 React app using Liftie API and SkiMaps.org API for stored California ski resorts 
 
-Deployed: https://ski-california.netlify.app/resorts
+## Deployed Here: https://ski-california.netlify.app/resorts
 [![Netlify Status](https://api.netlify.com/api/v1/badges/127b85dd-8e13-4e4b-9dda-8906bfb58639/deploy-status)](https://app.netlify.com/sites/ski-california/deploys)
 
 Brainstorm Details jotted down here: https://docs.google.com/document/d/1_D6flLVFl_JKkkNZttfD9lEe-h9RzmyzXOZs_rcEzK8/edit?usp=sharing
