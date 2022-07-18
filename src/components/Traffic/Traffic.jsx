@@ -71,14 +71,14 @@ export default function Traffic() {
 
    return (
       <Box sx={{
-         margin: 4,
+         margin: { xs: 1, sm: 4 },
          display: 'flex',
          justifyContent: 'center',
       }}>
          <Paper sx={{
             width: { trafficMapWidth },
             lineHeight: { xs: '1.9rem', sm: '1.2rem' },
-            padding: 4,
+            padding: { xs: 1, sm: 4 },
             boxShadow: 10,
             backgroundColor: '#fff',
             display: 'flex',

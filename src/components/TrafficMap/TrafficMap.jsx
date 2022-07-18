@@ -1,3 +1,4 @@
+import { Container } from '@mui/material';
 import React from 'react';
 
 export default function TrafficMap(props) {
@@ -15,19 +16,21 @@ export default function TrafficMap(props) {
       `https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_MAPS_API_KEY}
       &q=${props.resortName}+Ski+Resort&zoom=10&center=${props.lat},${props.long}`
    return (
-      <>
+      <Container style={{
+         width: { xs: '100%' }
+      }}>
          <div style={{
             marginTop: '2.6rem',
             lineHeight: '1.8rem',
          }}>{props.mapDescription}</div>
          <iframe
             style={iframeStyle}
-            width={props.mapWidth}
-            height="450"
+            width='100%'
+            height="500"
             loading='lazy'
             allow="fullscreen"
             referrerPolicy="no-referrer-when-downgrade"
             src={sourceString}></iframe>
-      </>
+      </Container >
    )
 }

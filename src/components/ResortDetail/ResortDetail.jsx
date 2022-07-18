@@ -17,11 +17,11 @@ export default function ResortDetail(props) {
    return (
       <>
          <Paper style={{
-            padding: '1.2rem',
+            padding: { xs: 0, sm: '1.2rem' },
             margin: '1.2rem 1.8rem'
          }}>
             <Grid container spacing={2} style={{
-               padding: '2.4rem',
+               padding: { xs: 0, sm: '2.4rem' },
                display: 'flex',
                justifyContent: 'center',
             }}>
@@ -40,7 +40,9 @@ export default function ResortDetail(props) {
                   <TrafficMap resortName={resort.name}
                      mapMode={'place'}
                      lat={resort.ll[1]}
-                     long={resort.ll[0]} />
+                     long={resort.ll[0]}
+                     mapDescription='Explore the local area!'
+                  />
                </Grid>
                <Grid item xs={12} style={{
                   paddingLeft: '9.6rem',

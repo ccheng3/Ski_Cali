@@ -4,6 +4,8 @@ import Tweet from '../Tweet/Tweet';
 import { Container } from '@mui/material';
 
 export default function TweetPanel(props) {
+   const tweetImageWidth = { xs: '350px', sm: '400px' };
+
    const tweets = props.resort.twitter.tweets.map(tweet => {
       const tweetDateStringArray = tweet.created_at.split(' ');
 
@@ -23,8 +25,9 @@ export default function TweetPanel(props) {
             justifyContent: 'center',
             alignItems: 'center',
             marginTop: '1.2rem',
+            width: { tweetImageWidth },
          }}>
-            <img width='350px' height='auto'
+            <img width='100%' height='auto'
                style={{ borderRadius: '10px' }}
                src={tweetMediaObject[0].media_url_https} />
          </Container>

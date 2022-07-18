@@ -4,10 +4,11 @@ import { Typography, Paper, Stack, Container, Button } from '@mui/material';
 import { TwitterLogo } from '../../images';
 
 export default function Tweet(props) {
+   const tweetMobileStyling = { padding: { xs: 0, sm: '2.4rem' } };
 
    return (
       <Paper style={{
-         padding: '1.2rem',
+         ...tweetMobileStyling,
          marginBottom: '1.2rem',
       }}>
          <Stack>
