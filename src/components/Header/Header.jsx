@@ -6,10 +6,6 @@ import logo from '../../images/skiing.png';
 import './Header.css'
 
 export default function Header() {
-   let activeStyle = {
-      textDecoration: 'underline',
-   };
-
    const handleLinkStyle = ({ isActive }) => {
       return {
          textDecoration: isActive ? 'none' : 'underline',
@@ -31,6 +27,7 @@ export default function Header() {
             <NavLink style={handleLinkStyle} className='main-navlink' to='/about'>About</NavLink>
             <NavLink style={handleLinkStyle} className='main-navlink' to='/resorts'>Resorts</NavLink>
             <NavLink style={handleLinkStyle} className='main-navlink' to='/traffic'>Highway Conditions</NavLink>
+            <NavLink style={handleLinkStyle} className='main-navlink' to='/safety'>Snow Safety </NavLink>
          </span>
       </Toolbar >
    );

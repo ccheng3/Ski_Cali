@@ -10,6 +10,7 @@ import {
    Resort,
    Resorts,
    Traffic,
+   Safety,
    HomeBody,
    NotFoundPage,
 } from './components';
@@ -86,6 +87,7 @@ export default function App() {
                element={<Resorts resorts={resorts} />} />
             <Route path='/resorts/:resortQuery' element={<Resort resorts={resorts} />} />
             <Route path='/traffic' element={<Traffic />} />
+            <Route path='/safety' element={<Safety />} />
             {/* Wild card path leads to a 404 not found page. */}
             <Route path='*' element={<NotFoundPage />} />
          </Routes>

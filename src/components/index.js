@@ -6,3 +6,4 @@ export { default as Resorts } from './Resorts/Resorts';
 export { default as Traffic } from './Traffic/Traffic';
 export { default as HomeBody } from './HomeBody/HomeBody';
 export { default as NotFoundPage } from './NotFoundPage/NotFoundPage';
+export { default as Safety } from './Safety/Safety';
