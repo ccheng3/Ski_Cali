@@ -36,6 +36,10 @@ export default function Traffic() {
       fontSize: '1.2rem',
    };
 
+   const trafficMapWidth = {
+      width: { xs: '350px', sm: '600px' },
+   };
+
 
    // use React DevTool to verify the state!
    React.useEffect(() => {
@@ -60,7 +64,8 @@ export default function Traffic() {
          mapDescription={mapMessages[index]}
          lat={userLocation.lat}
          long={userLocation.long}
-         key={nanoid()}>
+         key={nanoid()}
+         mapWidth={trafficMapWidth}>
       </TrafficMap>
    });
 
@@ -71,6 +76,8 @@ export default function Traffic() {
          justifyContent: 'center',
       }}>
          <Paper sx={{
+            width: { trafficMapWidth },
+            lineHeight: { xs: '1.9rem', sm: '1.2rem' },
             padding: 4,
             boxShadow: 10,
             backgroundColor: '#fff',

@@ -22,7 +22,7 @@ export default function TrafficMap(props) {
          }}>{props.mapDescription}</div>
          <iframe
             style={iframeStyle}
-            width="600"
+            width={props.mapWidth}
             height="450"
             loading='lazy'
             allow="fullscreen"

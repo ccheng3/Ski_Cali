@@ -28,8 +28,8 @@ export default function Safety() {
    }
 
    const videoLinks = ['HnXy77D4Uwk', 'TZQXuWzBC18', '1jcLEkjeCy4', '84lt-3uc_Gc?start=74'];
-   const videoTitles = ['How to drive in snowy weather', 'How to correct for slides',
-      'Watch: loss of tire traction in Big Bear, CA', 'Caution: Snow Immersion Suffocation due to Tree Well']
+   const videoTitles = ['How to drive in snowy weather', 'How to correct for slides while driving',
+      'Watch: loss of tire traction in Big Bear, CA', 'Caution: Suffocation incident due to tree well fall']
 
    return (
       <Paper elevation={3} style={videoPaperTemplateStyle}>
@@ -43,14 +43,27 @@ export default function Safety() {
          }>This knowledge could very well determine the
             difference between life and death!</Typography>
          <Stack>
-            {videoLinks.map((video) => {
-               return <Paper sx={videoPaperStyle}>
-                  <iframe width="100%" height="350"
-                     src={`https://www.youtube-nocookie.com/embed/${video}`}
-                     title="YouTube video player" frameborder="0"
-                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-            gyroscope; picture-in-picture" allowfullscreen></iframe>
-               </Paper>
+            {videoLinks.map((video, index) => {
+               return (
+                  <Stack style={{
+                     textAlign: 'center',
+                  }}>
+                     <Typography style={{
+                        marginTop: '1.6rem',
+                        fontWeight: 600,
+                        fontSize: '1.1rem'
+                     }} variant='h5'>
+                        {videoTitles[index].toUpperCase()}
+                     </Typography>
+                     <Paper sx={videoPaperStyle}>
+                        <iframe width="100%" height="350"
+                           src={`https://www.youtube-nocookie.com/embed/${video}`}
+                           title="YouTube video player" frameborder="0"
+                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+               gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     </Paper>
+                  </Stack>
+               )
             })}
          </Stack>
       </Paper >
