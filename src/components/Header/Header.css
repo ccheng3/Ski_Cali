@@ -12,7 +12,8 @@
 
 .main-nav {
    border-bottom: 3px solid #2d4850;
-   margin-top: 10px;
+   padding-top: 10px;
+   background-color: rgba(230, 230, 230, 0.8);
 }
 
 .main-navlink {
