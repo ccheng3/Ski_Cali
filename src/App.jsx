@@ -32,6 +32,8 @@ import {
    TahoeDonnerLogo
 } from './images';
 
+import background from './images/hero_banner.jpg';
+
 
 export default function App() {
    const [isBodyLoading, setIsBodyLoading] = React.useState(true);
@@ -81,7 +83,9 @@ export default function App() {
       <Paper>
          <Header />
          <Routes>
-            <Route path='/' element={<HomeBody />} />
+            <Route path='/' element={<HomeBody style={{
+               backgroundImage: `url(${background})`,
+            }} />} />
             <Route path='/about' element={<About />} />
             <Route path='/resorts'
                element={<Resorts resorts={resorts} />} />
