@@ -1,23 +1,84 @@
-.logo {
+.header-logo {
    width: 50px;
    height: 50px;
    border: 2px solid black;
    border-radius: 10px;
 }
 
-.title {
-   font-size: 48px;
-   color: #2d4850;
+@media screen and (min-width: 0px) {
+   .header-title {
+      font-size: 24px;
+      color: #2d4850;
+      margin-left: 1.2rem;
+   }
+
+   .header-nav-span {
+      display: none;
+   }
+
+   .header-small-screen-menu {
+      margin-left: auto;
+      cursor: pointer;
+   }
 }
 
-.main-nav {
+@media screen and (min-width: 650px) {
+   .header-title {
+      font-size: 48px;
+      color: #2d4850;
+      margin-left: 2.4rem;
+   }
+
+   .header-nav-span {
+      display: flex;
+      margin-left: auto;
+   }
+
+   .header-small-screen-menu {
+      display: none;
+   }
+}
+
+.header-nav {
    border-bottom: 3px solid #2d4850;
    padding-top: 10px;
    background-color: rgba(230, 230, 230, 0.8);
 }
 
-.main-navlink {
+.header-nav-link {
    color: #000;
    opacity: 0.7;
    font-size: 1.2rem;
+   margin: 0rem 0.8rem;
+}
+
+.header-nav-link:hover {
+   color: rgb(235, 103, 52);
+}
+
+.header-small-screen-menu {
+   /* display: none; */
+   cursor: pointer;
+}
+
+.header-small-screen-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   background-color: gray;
+   transition: 2.5s ease;
+   z-index: 5;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.header-small-screen-overlay-close {
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   cursor: pointer;
+   font-size: 2.4rem;
 }
