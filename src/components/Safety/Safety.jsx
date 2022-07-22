@@ -32,11 +32,11 @@ export default function Safety() {
       'Watch: loss of tire traction in Big Bear, CA', 'Caution: Suffocation incident due to tree well fall']
 
    return (
-      <Paper elevation={3} style={videoPaperTemplateStyle}>
-         <Typography style={textStyle}>Pursuing snow sports incurs its own natural risks.
+      <Paper elevation={3} sx={videoPaperTemplateStyle}>
+         <Typography sx={textStyle}>Pursuing snow sports incurs its own natural risks.
             Please educate yourself on the pertinent risks and prepare well
             in advance for unforeseen circumstances.</Typography>
-         <Typography style={{
+         <Typography sx={{
             ...textStyle,
             textDecoration: 'underline'
          }
@@ -45,13 +45,14 @@ export default function Safety() {
          <Stack>
             {videoLinks.map((video, index) => {
                return (
-                  <Stack style={{
+                  <Stack sx={{
                      textAlign: 'center',
                   }}>
-                     <Typography style={{
+                     <Typography sx={{
                         marginTop: '1.6rem',
                         fontWeight: 600,
-                        fontSize: '1.1rem'
+                        fontSize: '1.1rem',
+                        padding: { xs: '0rem 2.4rem', sm: 0 }
                      }} variant='h5'>
                         {videoTitles[index].toUpperCase()}
                      </Typography>

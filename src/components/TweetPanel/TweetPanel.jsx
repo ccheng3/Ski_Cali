@@ -20,7 +20,7 @@ export default function TweetPanel(props) {
       // grab and render the tweet's image if present, otherwise render nothing.
       const tweetMediaObject = tweet.entities.media;
       const tweetMediaFile = tweetMediaObject === undefined ? null :
-         <Container style={{
+         <Container sx={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',

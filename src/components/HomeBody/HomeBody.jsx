@@ -21,7 +21,6 @@ theme.typography.h3 = {
 };
 
 export default function HomeBody() {
-
    return (
       <Box style={{
          display: 'flex',

@@ -4,34 +4,36 @@ import { Typography, Paper, Stack, Container, Button } from '@mui/material';
 import { TwitterLogo } from '../../images';
 
 export default function Tweet(props) {
-   const tweetMobileStyling = { padding: { xs: 0, sm: '2.4rem' } };
-
    return (
-      <Paper style={{
-         ...tweetMobileStyling,
-         marginBottom: '1.2rem',
-      }}>
+      <Paper sx={{
+         padding: {
+            xs: '1.0rem',
+            sm: '2.4rem'
+         },
+         marginBottom: '2.4rem'
+      }} >
          <Stack>
-            <Typography style={{
+            <Typography sx={{
                fontWeight: 'bold',
-            }}>
+               fontSize: '1.2rem'
+            }} >
                {/* 'Mammoth Mountain Mountain Resort' 
             sounds really bad so just catch that */}
                {props.resort.name.includes('Mountain') ? `${props.resort.name} Resort` :
                   `${props.resort.name} Mountain Resort`}
             </Typography>
-            <Typography style={{
+            <Typography sx={{
                display: 'flex',
                alignItems: 'center',
             }}>
                <img src={TwitterLogo} width='25px' height='25px'
-                  style={{
+                  sx={{
                      marginRight: '5px',
                   }} />
                {`@${props.resort.twitter.user}`}
             </Typography>
 
-            <Container style={{
+            <Container sx={{
                marginTop: '1.2rem',
                lineHeight: '1.6rem',
                display: 'flex',
@@ -51,12 +53,12 @@ export default function Tweet(props) {
                      Extra Info found here:
                   </Button>}
             </Container>
-            <Typography style={{
+            <Typography sx={{
                marginTop: '1.2rem'
             }}>
                {props.tweetDateClean}
             </Typography>
          </Stack>
-      </Paper>
+      </Paper >
    );
 }
