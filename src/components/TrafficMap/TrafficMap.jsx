@@ -1,4 +1,4 @@
-import { Container } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import React from 'react';
 
 export default function TrafficMap(props) {
@@ -19,10 +19,11 @@ export default function TrafficMap(props) {
       <Container style={{
          width: { xs: '100%' }
       }}>
-         <div style={{
+         <Typography sx={{
             marginTop: '2.6rem',
-            lineHeight: '1.8rem',
-         }}>{props.mapDescription}</div>
+            lineHeight: { xs: '2.0rem', sm: '1.8rem' },
+            padding: { sm: '0 15rem' }
+         }}>{props.mapDescription}</Typography>
          <iframe
             style={iframeStyle}
             width='100%'
