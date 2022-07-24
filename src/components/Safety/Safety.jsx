@@ -1,5 +1,6 @@
 import React from 'react';
 
+import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 import { Paper, Stack, Typography, } from '@mui/material';
 
 export default function Safety() {
@@ -15,10 +16,12 @@ export default function Safety() {
    const videoPaperStyle = {
       padding: '1.8rem',
       display: 'flex',
+      flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      marginBottom: '1.2rem',
-      width: { xs: '350px', sm: '700px' }
+      marginBottom: '2.4rem',
+      width: { xs: '350px', sm: '700px' },
+      boxShadow: 5,
    }
 
    const textStyle = {
@@ -36,27 +39,42 @@ export default function Safety() {
          <Typography sx={textStyle}>Pursuing snow sports incurs its own natural risks.
             Please educate yourself on the pertinent risks and prepare well
             in advance for unforeseen circumstances.</Typography>
-         <Typography sx={{
-            ...textStyle,
-            textDecoration: 'underline'
-         }
-         }>This knowledge could very well determine the
-            difference between life and death!</Typography>
+         <Stack
+            direction='row'
+            spacing={2}
+            sx={{
+               display: 'flex',
+               alignItems: 'center',
+               marginBottom: '2.0rem',
+            }}>
+            <WarningAmberIcon
+               color='warning'
+               fontSize='large'
+            />
+            <Typography sx={{
+               ...textStyle,
+               textDecoration: 'underline',
+            }
+            }>
+               This knowledge could very well determine the
+               difference between life and death!</Typography>
+         </Stack>
          <Stack>
             {videoLinks.map((video, index) => {
                return (
                   <Stack sx={{
                      textAlign: 'center',
                   }}>
-                     <Typography sx={{
-                        marginTop: '1.6rem',
-                        fontWeight: 600,
-                        fontSize: '1.1rem',
-                        padding: { xs: '0rem 2.4rem', sm: 0 }
-                     }} variant='h5'>
-                        {videoTitles[index].toUpperCase()}
-                     </Typography>
+
                      <Paper sx={videoPaperStyle}>
+                        <Typography sx={{
+                           marginBottom: '1.2rem',
+                           fontWeight: 600,
+                           fontSize: '1.1rem',
+                           padding: { xs: '0rem 2.4rem', sm: 0 }
+                        }} variant='h5'>
+                           {videoTitles[index].toUpperCase()}
+                        </Typography>
                         <iframe width="100%" height="350"
                            src={`https://www.youtube-nocookie.com/embed/${video}`}
                            title="YouTube video player" frameborder="0"
