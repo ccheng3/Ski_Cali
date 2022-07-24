@@ -89,7 +89,11 @@ export default function Traffic() {
          }}>
             <div style={divStyling}>
                Please see Chad Smith's excellent Tahoe road conditions website here:
-               <CustomButton sx={{ color: '#ed6c02', backgroundColor: '#2d4850', }} variant="contained" href="https://tahoeroads.info/">
+               <CustomButton sx={{
+                  marginLeft: '1.2rem',
+                  color: '#ed6c02',
+                  backgroundColor: '#2d4850',
+               }} variant="contained" href="https://tahoeroads.info/">
                   Check road conditions
                </CustomButton>
             </div>
