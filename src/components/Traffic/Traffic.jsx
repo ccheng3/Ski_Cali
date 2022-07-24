@@ -1,9 +1,10 @@
 import React from 'react';
-import { Box, Paper, Button, Skeleton } from '@mui/material';
+import { Box, Paper, Skeleton } from '@mui/material';
 import { nanoid } from 'nanoid';
 
 
 import TrafficMap from '../TrafficMap/TrafficMap';
+import CustomButton from '../CustomButton/CustomButton';
 
 export default function Traffic() {
    const destinations = ['Truckee,CA', 'SouthLakeTahoe,CA', 'MammothMountain,CA'];
@@ -87,9 +88,11 @@ export default function Traffic() {
             flexDirection: 'column',
          }}>
             <div style={divStyling}>
-               Please see Chad Smith's excellent Tahoe road conditions website here: <Button sx={{ color: '#ed6c02', backgroundColor: '#2d4850', }} variant="contained" href="https://tahoeroads.info/" target='_blank' rel='noopener noreferrer'>
+               Please see Chad Smith's excellent Tahoe road conditions website here:
+               <CustomButton sx={{ color: '#ed6c02', backgroundColor: '#2d4850', }} variant="contained" href="https://tahoeroads.info/">
                   Check road conditions
-               </Button></div>
+               </CustomButton>
+            </div>
             <ul> <h3>Three main roads into Tahoe from SF Bay Area:</h3>
                <li>Highway 88 --> Goes to Kirkwood </li>
                <li>Highway 50 --> Goes to Sierra at Tahoe and Heavenly </li>

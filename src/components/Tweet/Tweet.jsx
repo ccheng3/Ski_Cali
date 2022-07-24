@@ -1,7 +1,9 @@
 import React from 'react';
 
-import { Typography, Paper, Stack, Container, Button } from '@mui/material';
+import { Typography, Paper, Stack, Container } from '@mui/material';
 import { TwitterLogo } from '../../images';
+
+import CustomButton from '../CustomButton/CustomButton';
 
 export default function Tweet(props) {
    return (
@@ -45,14 +47,14 @@ export default function Tweet(props) {
                {props.tweetText}
                {props.tweetMediaFile}
                {props.tweetTextURL === '' || !props.tweetTextURL.includes('https') ? null :
-                  <Button sx={{
+                  <CustomButton sx={{
                      color: '#ed6c02',
                      backgroundColor: '#2d4850',
                      marginTop: '1.2rem',
                      maxWidth: '250px',
                   }} variant="contained" href={props.tweetTextURL} target='_blank' rel='noopener noreferrer'>
                      Extra Info found here:
-                  </Button>}
+                  </CustomButton>}
             </Container>
             <Typography sx={{
                marginTop: '1.2rem'

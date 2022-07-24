@@ -1,12 +1,12 @@
 import React from 'react';
 
 import {
-   Paper, Card,
+   Card,
    CardMedia, CardContent, Grid,
-   CardActions, Button, Typography
+   CardActions
 } from '@mui/material';
 
-import WindyLogo from '../../images/windy-logo.png';
+import CustomButton from '../CustomButton/CustomButton';
 
 export default function Webcams(props) {
    return (props.webcams.map(cam => {
@@ -26,11 +26,11 @@ export default function Webcams(props) {
                   {cam.name}
                </CardContent>
                <CardActions>
-                  <Button variant="outlined"
+                  <CustomButton variant="outlined"
                      size='small'
                      target="_blank" href={cam.source}>
-                     {`View Time Lapse`}
-                  </Button>
+                     View Time Lapse
+                  </CustomButton>
                </CardActions>
             </Card>
          </Grid>

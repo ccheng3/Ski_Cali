@@ -2,9 +2,10 @@ import React from 'react';
 
 import {
    Typography,
-   Paper, Container,
-   Button,
+   Paper, Container
 } from '@mui/material';
+
+import CustomButton from '../CustomButton/CustomButton';
 
 export default function WeatherReport(props) {
    const todayStringArray = props.resort.weather.date.split('-');
@@ -46,13 +47,13 @@ export default function WeatherReport(props) {
                   marginTop: '1.0rem',
                   fontSize: '1.1rem',
                }}>{`"${props.resort.weather.text}"`}</Typography>
-            <Button sx={{
+            <CustomButton sx={{
                color: '#ed6c02',
                backgroundColor: '#2d4850',
                marginTop: '1.2rem'
             }} variant="contained" href={props.resort.weather.notice.href} target='_blank' rel='noopener noreferrer'>
                View the complete NOAA weather report
-            </Button>
+            </CustomButton>
          </Paper>
       </>
    );
