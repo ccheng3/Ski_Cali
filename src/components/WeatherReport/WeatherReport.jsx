@@ -22,12 +22,12 @@ export default function WeatherReport(props) {
             boxShadow: 5
          }}>
             {/* We in U.S.A format our dates as MM/DD/YYYY, while the Europeans format as DD/MM/YYYY */}
-            <Container style={{
+            <Container sx={{
                display: 'flex',
                alignItems: 'center',
             }}>
                <h3>Weather Report for Today, {todayStringArray[1]}/{todayStringArray[2]}/{todayStringArray[0]}</h3>
-               <Container style={{
+               <Container sx={{
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'flex-end',
@@ -39,11 +39,13 @@ export default function WeatherReport(props) {
                   />
                </Container>
             </Container>
-            <p style={{
-               fontStyle: 'italic',
-               marginTop: '1.0rem',
-               fontSize: '1.1rem',
-            }}>{`"${props.resort.weather.text}"`}</p>
+            <Typography
+               variant='body1'
+               sx={{
+                  fontStyle: 'italic',
+                  marginTop: '1.0rem',
+                  fontSize: '1.1rem',
+               }}>{`"${props.resort.weather.text}"`}</Typography>
             <Button sx={{
                color: '#ed6c02',
                backgroundColor: '#2d4850',

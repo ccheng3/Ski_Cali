@@ -5,7 +5,7 @@ import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDiss
 
 export default function DataNotPresent(props) {
    return (
-      <Paper style={{
+      <Paper sx={{
          display: 'flex',
          alignItems: 'center',
          padding: '2.4rem 3.6rem',

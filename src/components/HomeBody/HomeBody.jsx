@@ -26,7 +26,7 @@ export default function HomeBody() {
          display: 'flex',
          justifyContent: 'center',
          background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${background})`,
-         backgroundPosition: '15% 70%',
+         backgroundPosition: 'top center',
          backgroundSize: 'cover',
          width: '100%',
          height: '100vh',
