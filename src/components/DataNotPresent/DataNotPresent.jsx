@@ -9,6 +9,7 @@ export default function DataNotPresent(props) {
          display: 'flex',
          alignItems: 'center',
          padding: '2.4rem 3.6rem',
+         boxShadow: 5
       }}>
          <div>No {props.dataName} Data Provided...
          </div><SentimentVeryDissatisfiedIcon fontSize='large' sx={{ color: 'brown' }} />

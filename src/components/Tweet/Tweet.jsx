@@ -10,7 +10,8 @@ export default function Tweet(props) {
             xs: '1.0rem',
             sm: '2.4rem'
          },
-         marginBottom: '2.4rem'
+         marginBottom: '2.4rem',
+         boxShadow: 10
       }} >
          <Stack>
             <Typography sx={{
