@@ -29,3 +29,5 @@ Thought was explained here: https://www.codementor.io/@ekunolaeasybuoy/deploying
 solution to remove directories from repo but not local from here: 
 https://stackoverflow.com/questions/6313126/how-to-remove-a-directory-from-git-repository
 
+07/24/22: Used Promise.all() to actually run 2 fetch API calls together - Liftie and Skimap.org APIs. Was considering to add Unsplash API random ImageList gallery to HomePage but restricted to 50 calls an hour so still unsure how to proceed. Currently planning next steps.    
+
