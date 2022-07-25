@@ -8,15 +8,6 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function Resorts(props) {
-   const [clickedResort, setClickedResort] = React.useState({});
-   const [isOpen, setIsOpen] = React.useState(false);
-   const handleClose = () => {
-      setIsOpen(false);
-   };
-   const handleToggle = () => {
-      setIsOpen(prevSetOpen => !prevSetOpen);
-   };
-
    const resortList = props.resorts.map((resort) => {
       return (
          // the Grid's responsive layout breakpoints rely on a 
@@ -26,6 +17,10 @@ export default function Resorts(props) {
          // If MD condition or above, then each element in grid takes 3 cols (4 col layout total)
          <Grid key={resort.skimapID} item
             xs={12} sm={6} md={3}>
+            {/* The key to the transition from resorts to resort page is 
+            the React Router Link component used here + useParams hook in 
+            respective resort's page component. I guess I forgot what was 
+            going on. */}
             <Link to={resort.query}>
                <Card sx={{
                   maxWidth: 345,
@@ -34,11 +29,7 @@ export default function Resorts(props) {
                      boxShadow: 20,
                   },
                   cursor: 'pointer',
-               }}
-                  onClick={() => {
-                     handleToggle();
-                     setClickedResort(resort);
-                  }}>
+               }}>
                   <CardMedia
                      component='img'
                      height='140'
@@ -46,11 +37,14 @@ export default function Resorts(props) {
                      alt="ski resort logo"
                   />
                   <CardContent>
-                     <Typography gutterBottom variant='h4' component='div'>
+                     <Typography gutterBottom variant='h4' component='div'
+                        sx={{
+                           textAlign: 'center',
+                        }}>
                         {resort.query}
                      </Typography>
                      <Typography variant='body2' color='text.secondary'>
-                        {resort.skimapID}
+                        Ski Map ID: {resort.skimapID}
                      </Typography>
                   </CardContent>
                </Card>

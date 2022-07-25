@@ -36,13 +36,12 @@ import background from './images/hero_banner.jpg';
 
 
 export default function App() {
-   const [isBodyLoading, setIsBodyLoading] = React.useState(true);
    const resorts = [{ query: 'boreal', skimapID: '523', image: BorealLogo },
    { query: 'chinapeak', skimapID: '527', image: ChinaPeakLogo },
    { query: 'diamondpeak', skimapID: '359', image: DiamondPeakLogo },
-   { query: 'heavenly', skimapID: '537', image: HeavenlyLogo },
+   { query: 'heavenly', skimapID: '544', image: HeavenlyLogo },
    { query: 'northstar', skimapID: '531', image: NorthstarLogo },
-   { query: 'kirkwood', skimapID: '544', image: KirkwoodLogo },
+   { query: 'kirkwood', skimapID: '537', image: KirkwoodLogo },
    { query: 'homewood', skimapID: '545', image: HomewoodLogo },
    { query: 'june-mountain', skimapID: '540', image: JuneLogo },
    { query: 'mammoth-lakes', skimapID: '530', image: MammothLogo },
@@ -52,32 +51,6 @@ export default function App() {
    { query: 'sierra', skimapID: '525', image: SierraLogo },
    { query: 'sugarbowl', skimapID: '543', image: SugarBowlLogo },
    { query: 'tahoe-donner', skimapID: '529', image: TahoeDonnerLogo },]
-
-   // React.useEffect(() => {
-   //    resorts.forEach((resort, index) => {
-   //       fetch(`${corsProxy}/https://liftie.info/api/resort/${resort.query}`)
-   //          .then(response => response.json())
-   //          .then(data => {
-   //             // const removeProp = 'id';
-   //             // const { [removeProp]: remove, ...rest } = data;
-   //             resorts[index] = { ...resorts[index], ...data };
-   //          })
-   //          .catch((error) => {
-   //             console.log(`Encountered error in Liftie Fetch request: ${error}`)
-   //          });
-
-   //       // fetch(`${corsProxy}/https://skimap.org/SkiAreas/view/${resort.skimapID}.json`)
-   //       //    .then(response => response.json())
-   //       //    .then(data => {
-   //       //       skiMapData[index] = data;
-   //       //    })
-   //       //    .catch((error) => {
-   //       //       console.log(`Encountered error in SkiMap.org Fetch request: ${error}`)
-   //       //    });
-   //    });
-   //    setIsBodyLoading(previsBodyLoading => !previsBodyLoading);
-   // }, []);
-   // console.log(skiMapData);
 
    return (
       <Paper>

@@ -13,6 +13,7 @@ export default function Resort(props) {
    let skimapID = '';
 
    let [resortData, setResortData] = React.useState({});
+   let [skiMapData, setSkiMapData] = React.useState({});
    const corsProxy = 'https://mighty-scrubland-75189.herokuapp.com';
 
    React.useEffect(() => {
@@ -25,15 +26,19 @@ export default function Resort(props) {
       }
 
       skimapID = props.resorts.find(resort => resort.query === resortQuery).skimapID;
-      fetch(`${corsProxy}/https://liftie.info/api/resort/${resortQuery}`)
-         .then(response => response.json())
+      Promise.all([
+         fetch(`${corsProxy}/https://liftie.info/api/resort/${resortQuery}`),
+         fetch(`${corsProxy}/https://skimap.org/SkiAreas/view/${skimapID}.json`)
+      ])
+         .then(responses => {
+            return Promise.all(responses.map(response => response.json()))
+         })
          .then(data => {
-            setResortData(data);
+            setResortData(data[0]);
+            setSkiMapData(data[1]);
             setTimeout(() => setIsDataLoaded(true), 1000);
          })
-         .catch((error) => {
-            console.log(`Encountered error in Liftie Fetch request: ${error}`)
-         });
+         .catch(error => console.log(`Error: ${error}`));
    }, [resortQuery])
 
    // only display the resort content AFTER the fetch call has returned!
@@ -53,8 +58,9 @@ export default function Resort(props) {
       displayContent = <NotFoundPage />;
    }
    if (isDataLoaded) {
-      displayContent = <ResortDetail resortData={resortData}
-         skimapID={skimapID}
+      displayContent = <ResortDetail
+         resortData={resortData}
+         skiMapData={skiMapData}
       />;
    }
 
