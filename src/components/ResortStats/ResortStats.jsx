@@ -8,7 +8,7 @@ export default function ResortStats(props) {
    let skiMaps = [];
    for (let i = 0; i <= 2; ++i) {
       skiMaps.push(
-         <li className='resort-detail-stat'>
+         <li className='resort-detail-stat' key={props.skiMapData.ski_maps[i].id}>
             <CustomButton variant='contained'
                href={props.skiMapData.ski_maps[i].media.original.url}>
                {`${props.skiMapData.ski_maps[i].metadata.year_published}-${parseInt(props.skiMapData.ski_maps[i].metadata.year_published) + 1} Season Ski Resort Map`}
