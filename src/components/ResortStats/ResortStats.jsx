@@ -1,8 +1,22 @@
+import { Typography, Stack } from '@mui/material';
 import React from 'react';
 
 import CustomButton from '../CustomButton/CustomButton';
+import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
 
 export default function ResortStats(props) {
+   let skiMaps = [];
+   for (let i = 0; i <= 2; ++i) {
+      skiMaps.push(
+         <li className='resort-detail-stat'>
+            <CustomButton variant='contained'
+               href={props.skiMapData.ski_maps[i].media.original.url}>
+               {`${props.skiMapData.ski_maps[i].metadata.year_published}-${parseInt(props.skiMapData.ski_maps[i].metadata.year_published) + 1} Season Ski Resort Map`}
+            </CustomButton>
+         </li>
+      )
+   }
+
    return (
       <ul style={{
          listStyle: 'none',
@@ -41,6 +55,20 @@ export default function ResortStats(props) {
             }} variant='outlined' href={props.skiMapData.official_website}>
                {`${props.skiMapData.name} Official Website`}
             </CustomButton></li>
+         <Stack sx={{
+            marginTop: '2.4rem',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+         }}>
+            <Typography variant='h4'>
+               <DownloadForOfflineIcon sx={{
+                  marginRight: '1.2rem',
+                  fontSize: '2.4rem',
+               }} />
+               Get the Ski Maps Here</Typography>
+            {skiMaps}
+         </Stack>
       </ul>
    );
 }
