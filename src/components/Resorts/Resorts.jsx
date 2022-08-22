@@ -54,14 +54,23 @@ export default function Resorts(props) {
       )
    })
    return (
-      <Grid container my={4} style={{
-         backgroundColor: '#D3D3D3		',
-         marginTop: 0,
-         marginBottom: 0,
-         paddingTop: '32px',
-         paddingBottom: '32px',
-      }}>
-         {resortList}
-      </Grid>
+      <>
+         <div style={{
+            textAlign: 'center',
+            fontSize: '1.6rem'
+         }}>A combined total of <span style={{
+            textDecoration: 'underline',
+            textDecorationThickness: '3px',
+         }}>{resortList.length}</span> ski resorts.</div>
+         <Grid container my={4} style={{
+            backgroundColor: '#D3D3D3		',
+            marginTop: 0,
+            marginBottom: 0,
+            paddingTop: '32px',
+            paddingBottom: '32px',
+         }}>
+            {resortList}
+         </Grid>
+      </>
    )
 };

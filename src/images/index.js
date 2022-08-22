@@ -152,5 +152,6 @@ export { default as MtBuller } from './mtbuller.jpg';
 export { default as MtHotham } from './hotham.png'
 export { default as MtSnow } from './mountsnow.png';
 export { default as MtSunapee } from './sunapee.jpeg';
+export { default as Montegen } from './montegen.webp';
 
 
