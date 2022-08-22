@@ -15,12 +15,14 @@ export default function WeatherReport(props) {
          <Typography variant='h4'
             sx={{
                textDecoration: 'underline',
-               marginBottom: '1.2rem'
+               marginBottom: '1.2rem',
+               color: '#eee',
             }}>{props.resort.name}
          </Typography>
          <Paper sx={{
             padding: '1.2rem 2.4rem',
-            boxShadow: 5
+            boxShadow: 5,
+            backgroundColor: '#ddd',
          }}>
             {/* We in U.S.A format our dates as MM/DD/YYYY, while the Europeans format as DD/MM/YYYY */}
             <Container sx={{

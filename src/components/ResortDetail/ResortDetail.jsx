@@ -22,8 +22,9 @@ export default function ResortDetail(props) {
    return (
       <>
          <Paper style={{
-            padding: { xs: 0, sm: '1.2rem' },
-            margin: '1.2rem 1.8rem'
+            padding: '1.4rem',
+            margin: '1.2rem 1.8rem',
+            backgroundColor: '#666',
          }}>
             <Grid container spacing={2} style={{
                padding: { xs: 0, sm: '2.4rem' },
@@ -31,7 +32,7 @@ export default function ResortDetail(props) {
                justifyContent: 'center',
             }}>
                <Grid item xs={12} style={{
-                  maxWidth: '800px'
+                  maxWidth: '800px',
                }}>
                   {/* Not all resorts have weather data to use. Ask user to check a 
          nearby resort for more info. */}
@@ -45,6 +46,7 @@ export default function ResortDetail(props) {
                      marginTop: '2.4rem',
                      boxShadow: '5',
                      padding: '1.2rem 0',
+                     backgroundColor: '#ddd',
                   }}>
                      <Stack direction='row'
                         sx={{
@@ -92,7 +94,7 @@ export default function ResortDetail(props) {
                <Grid item xs={12} style={{
                   maxWidth: '800px'
                }}>
-                  <TweetPanel resort={resort} />
+                  {!resort.twitter ? <DataNotPresent /> : <TweetPanel resort={resort} />}
                </Grid>
             </Grid>
          </Paper>

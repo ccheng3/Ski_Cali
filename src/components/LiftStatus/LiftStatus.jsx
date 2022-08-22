@@ -41,8 +41,8 @@ export default function LiftStatus(props) {
 
    return (
       <Accordion sx={{
-         boxShadow: 5
-      }}>
+         boxShadow: 5,
+      }} defaultExpanded={true}>
          <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
