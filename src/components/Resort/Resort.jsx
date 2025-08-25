@@ -14,7 +14,7 @@ export default function Resort(props) {
 
    let [resortData, setResortData] = React.useState({});
    let [skiMapData, setSkiMapData] = React.useState({});
-   const corsProxy = 'https://corsproxy.io/?';
+   const corsProxy = 'https://cors-anywhere.herokuapp.com/';
 
    React.useEffect(() => {
       //  error check for a valid resort query name first
